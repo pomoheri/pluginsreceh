@@ -1,0 +1,25 @@
+{
+    "name": "monsterz/pluginsreceh",
+    "description": "Small plugins for Laravel project",
+    "keywords": [
+        "mnemonic","code"
+    ],
+    "homepage" : "https://github.com/aazmonsterz/pluginsreceh",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Azhar Muhammad Noor",
+            "email": "aazmuhammadnoor@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+    },
+    "autoload": {
+        "psr-4": {
+            "Monsterz\\Pluginsreceh\\": "src/" 
+        } 
+    }
+}
