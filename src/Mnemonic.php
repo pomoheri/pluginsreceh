@@ -24,8 +24,7 @@ class Mnemonic{
 	 * @return void
 	 */
     public static function model($model){
-    	$model = explode(".",$model);
-    	$model = implode('\\',$model);
+        $model = str_replace(".", '\\', $model);
     	$model = '\\App\\'.$model;
         static::$model_name = $model;
         return new static;
@@ -97,8 +96,11 @@ class Mnemonic{
      * @method withDate
      * @return void
      */
-    public static function withDate(){
-        static::$date = true;
+    public static function withDate($format=null){
+        static::$date = 'Ymd';
+        if($format){
+            static::$date = $format;
+        }
         return new static;
     }
 
@@ -132,7 +134,7 @@ class Mnemonic{
 
         $code = "";
         $code .= $prefix;
-        $code .= ($date) ? date('Ymd') : '';
+        $code .= ($date) ? date($date) : '';
         $code .= $next_code;
         $code .= $suffix;
 

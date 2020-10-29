@@ -2,7 +2,9 @@
     "name": "monsterz/pluginsreceh",
     "description": "Small plugins for Laravel project",
     "keywords": [
-        "mnemonic","code"
+        "laravel",
+        "mnemonic",
+        "code"
     ],
     "homepage" : "https://github.com/aazmonsterz/pluginsreceh",
     "type": "library",
@@ -15,7 +17,7 @@
         }
     ],
     "require": {
-        "php": "^7.0",
+        "php": "^7.0"
     },
     "autoload": {
         "psr-4": {
